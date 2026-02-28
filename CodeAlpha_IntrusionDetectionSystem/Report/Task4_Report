@@ -1,0 +1,94 @@
+CodeAlpha Internship — Task 4
+Intrusion Detection System using Snort
+
+Name: Lalit Mhase
+Internship: CodeAlpha Cybersecurity
+Task: 4 — Implementing IDS using Snort
+Date: January 2026
+
+OBJECTIVE
+
+The objective of this task is to design, configure, and deploy an Intrusion Detection System (IDS) using Snort on Windows in order to monitor network traffic, detect suspicious activity, and analyze packet behavior in real time.
+
+TOOLS & TECHNOLOGIES USED
+
+• Snort 2.9.20 (Windows)
+• Npcap
+• Microsoft Windows 10
+• Command Prompt
+• GitHub
+
+SYSTEM CONFIGURATION
+
+Installation Steps
+
+Installed Npcap for packet capturing.
+
+Installed Snort 2.9.20 on Windows.
+
+Created required directories:
+
+C:\Snort\log
+C:\Snort\rules
+
+RULE CONFIGURATION
+
+A custom rule file named local.rules was created and linked in snort.conf.
+The network interface was identified using the following command:
+
+snort -W
+
+RUNNING SNORT IN IDS MODE
+
+The following command was used to start Snort in IDS mode:
+
+snort -i 4 -c C:\Snort\etc\snort.conf -A console -l C:\Snort\log
+
+TESTING & MONITORING
+
+After starting the IDS, live network traffic was captured and analyzed in real time.
+The system inspected different types of packets including TCP, UDP, ICMP, IPv4, and IPv6.
+Snort generated detailed runtime statistics such as:
+
+• Packet processing performance
+• Session tracking information
+• Protocol distribution
+• Memory usage statistics
+
+Screenshots of configuration steps and live output were recorded as proof of successful implementation.
+
+RESULTS
+
+The Intrusion Detection System successfully:
+
+• Captured live network traffic
+• Analyzed packets in real time
+• Generated detailed network statistics
+• Operated continuously without errors
+
+This confirms the successful deployment and functionality of the Snort IDS.
+
+PROJECT STRUCTURE
+
+Snort-IDS-CodeAlpha-Task4
+|
+|-- config
+| |-- snort.conf
+| |-- local.rules
+|
+|-- POC
+|
+|-- report
+|-- Task4_Report.txt
+
+CONCLUSION
+
+This project demonstrates the successful implementation of an Intrusion Detection System using Snort.
+It provides effective real-time network monitoring and serves as a strong foundation for future cybersecurity solutions.
+
+FUTURE ENHANCEMENTS
+
+• Implement automated alert notifications
+• Add more advanced detection rules
+• Integrate Snort with SIEM platforms
+• Monitor multiple network interfaces
